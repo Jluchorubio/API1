@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países Bajos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Bandera decorativa -->
+        <div class="flag-stripes">
+            <div class="stripe red"></div>
+            <div class="stripe white"></div>
+            <div class="stripe blue"></div>
+        </div>
+
+        <header class="header">
+            <div class="header-content">
+                <h1 id="country-name" class="country-name">Países Bajos</h1>
+                <p class="header-subtitle">Información oficial obtenida de REST Countries API</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Tarjeta principal con información completa -->
+            <div class="card main-card">
+                <div class="card-header">
+                    <h2 id="full-name" class="card-title">Nombre oficial del país</h2>
+                    <div class="flag-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 class="info-label">Idioma(s) oficial(es)</h3>
+                                <p id="language" class="info-value">Cargando idiomas...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 class="info-label">Gentilicio</h3>
+                                <p id="demonym" class="info-value">Cargando gentilicio...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-globe-europe"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 class="info-label">Subregión</h3>
+                                <p id="subregion" class="info-value">Cargando subregión...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 class="info-label">Código del país</h3>
+                                <p class="info-value">NLD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <p class="api-info">
+                        <i class="fas fa-database"></i>
+                        Todos los datos son obtenidos dinámicamente desde la API REST Countries
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Tarjeta informativa sobre la API -->
+            <div class="card secondary-card">
+                <h2 class="card-title">Sobre los datos</h2>
+                <div class="info-content">
+                    <p>La información mostrada en esta página se obtiene exclusivamente de la API pública REST Countries a través del siguiente endpoint:</p>
+                    
+                    <div class="code-snippet">
+                        <code>https://restcountries.com/v3.1/alpha?codes=NLD,COL,BRA,CHN&fields=name,languages,demonyms,subregion</code>
+                    </div>
+                    
+                    <p>La página filtra automáticamente solo los datos correspondientes a <strong>Países Bajos (NLD)</strong>.</p>
+                    
+                    <div class="status-container">
+                        <div class="status-item">
+                            <span class="status-label">Estado de la API:</span>
+                            <span id="api-status" class="status-value loading">Comprobando...</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Datos cargados:</span>
+                            <span id="data-status" class="status-value loading">Pendiente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2023 Información de Países Bajos | 
+                <span id="update-time">Última actualización: --:--:--</span> | 
+                <a href="https://restcountries.com" target="_blank">API REST Countries</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
